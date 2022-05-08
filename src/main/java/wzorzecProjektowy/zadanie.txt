@@ -1,0 +1,9 @@
+1.  Stwórz interfejs o nazwie „Samochod”
+z metodą
+ - int maxPredkosc();
+
+Stwórz trzy klasy które będą go implementować (Mercedes, BMW, Audi). Każda klasa powinna zawierać pola cena, maxPredkosc, kolor. Zaimplementuj metode maxPredkosc()
+w każdej z trzech klas.
+
+Stwórz klasę FabrykaSamochodów która będzie tworzyć konkretny Samochod w zależności
+od parametru maxPredkosc.
