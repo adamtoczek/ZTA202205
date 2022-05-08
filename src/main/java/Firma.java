@@ -20,6 +20,9 @@ public class Firma {
         programistaAdam.wyswietlDane();
         tester.wyswietlDane();
 
+        Pracownik menager = new Pracownik("Kasia", "Malinowska", 25);
+        menager.wyswietlDane();
+
 
     }
 }
@@ -28,6 +31,23 @@ class Pracownik {
     String imie;
     String nazwisko;
     int wiek;
+
+    public Pracownik() {
+
+    }
+
+    public Pracownik(String imie, String nazwisko) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.wiek = 0;
+    }
+
+    public Pracownik(String imie, String nazwisko, int wiek) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.setWiek(wiek);
+    }
+
 
     public void wyswietlDane() {
         System.out.println("Pracownik: "+imie+" "+nazwisko+"\t"+wiek+" lat");
