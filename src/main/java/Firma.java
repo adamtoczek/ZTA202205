@@ -10,9 +10,9 @@ public class Firma {
         programistaAdam.nazwisko = "Kowalski";
         programistaAdam.wiek = 18;
 
-        tester.imie = "Joanna";
-        tester.nazwisko = "Dark";
-        tester.wiek = 22;
+        tester.setImie("Joanna");
+        tester.setNazwisko("Dark");
+        tester.setWiek(22);
 
         System.out.println(programistaAdam.imie + " " + programistaAdam.nazwisko);
         System.out.println(tester.wiek);
@@ -40,6 +40,18 @@ class Pracownik {
     }
     public int getWiek() {
         return wiek;
+    }
+
+    public void setWiek (int wiek) {
+        this.wiek = wiek;
+    }
+
+    public void setImie(String imie) {
+        this.imie = imie;
+    }
+
+    public void setNazwisko(String nazwisko) {
+        this.nazwisko = nazwisko;
     }
 }
 
