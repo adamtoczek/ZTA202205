@@ -12,7 +12,12 @@ dodatkowo:
  */
 public class ZadanieDomowe1 {
     public static void main(String[] args) {
-
+        System.out.println("1:"+isPrime(1));
+        System.out.println("2:"+isPrime(2));
+        System.out.println("3:"+isPrime(3));
+        System.out.println("4:"+isPrime(4));
+        System.out.println("13:"+isPrime(13));
+        System.out.println("15:"+isPrime(15));
     }
 
     public static boolean isPrime(int n) {
@@ -22,7 +27,10 @@ public class ZadanieDomowe1 {
         if (n == 2)
             return true;
 
-        for (int i = 2; i < n; i++) {
+        if (n%2  == 0) //oprocz liczby 2, wszystkie liczby parzyste nie sa pierwsze
+            return false;
+// for (int i = 2; i <= Math.sqrt(n); i=i+2) { // wersja z ograniczeniem sprawdzania dzielnikow do pierwiastka kwadratowego liczby n
+        for (int i = 3; i < n; i=i+2) { //mozemy sprawdzac tylko nieparzyste dzielniki, bo wszystkie parzyste odpadly wczesniej
             if (n%i == 0)
                 return false;
         }

@@ -43,7 +43,10 @@ class Pracownik {
     }
 
     public void setWiek (int wiek) {
-        this.wiek = wiek;
+        if (wiek > 0)
+            this.wiek = wiek;
+        else
+            this.wiek = 0;
     }
 
     public void setImie(String imie) {
