@@ -23,6 +23,10 @@ public class Warzywniak {
 
         System.out.println(koszykOwocow);
 
+        for(Owoc item : koszykOwocow) {
+            System.out.println(item.pobierzCene());
+        }
+
 
 
 
