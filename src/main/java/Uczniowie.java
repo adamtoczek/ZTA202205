@@ -1,3 +1,5 @@
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class Uczniowie {
     public static void main(String[] args) {
         Student michal = new Student("Michal", "Piotrkowski", 4.7, 180, "8465197");
@@ -7,14 +9,17 @@ public class Uczniowie {
 }
 
 
-class Uczen {
+abstract class Uczen {
     String imie;
     String nazwisko;
+    public static final String PESEL = "123456";
 
     public Uczen(String imie, String nazwisko) {
         this.imie = imie;
         this.nazwisko = nazwisko;
     }
+
+    public abstract void recytuj();
 }
 class Podstawowkarz extends Uczen {
     double srednia;
@@ -22,6 +27,13 @@ class Podstawowkarz extends Uczen {
     public Podstawowkarz(String imie, String nazwisko, double srednia) {
         super(imie, nazwisko);
         this.srednia = srednia;
+
+    }
+
+
+    @Override
+    public void recytuj() {
+        System.out.println("Pieksnie recytuje");
     }
 }
 
