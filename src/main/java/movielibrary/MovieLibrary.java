@@ -3,6 +3,7 @@ package movielibrary;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
 
 public class MovieLibrary {
     List<Movie> listaFilmow = new ArrayList<>();
@@ -13,10 +14,12 @@ public class MovieLibrary {
 
     public List<Movie> getMoviesBetweenDates(int startYear, int endYear) {
         List<Movie> tmp = new ArrayList<>();
-        for (Movie item : listaFilmow) {
-            if (item.rokWydania >= startYear && item.rokWydania <= endYear)
-                tmp.add(item);
-        }
+//        for (Movie item : listaFilmow) {
+//            if (item.rokWydania >= startYear && item.rokWydania <= endYear)
+//                tmp.add(item);
+//        }
+        // druga wersja filtrowania z uzyciem stream i lambdy
+         tmp = listaFilmow.stream().filter(item -> item.rokWydania >= startYear && item.rokWydania <= endYear).collect(Collectors.toList());
         return tmp;
     }
 
